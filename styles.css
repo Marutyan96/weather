@@ -1,0 +1,186 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: #4CAF50; /* Зеленый цвет для кнопок */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px; /* Отступ между кнопками */
+}
+
+button:hover {
+    background-color: #45a049; /* Более темный зеленый при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+button:active {
+    transform: scale(0.95); /* Уменьшение кнопки при нажатии */
+}
+
+/* Дополнительные стили для разных кнопок, если нужно */
+.btn-location {
+    background-color: #007bff; /* Синий цвет для кнопки получения погоды по местоположению */
+}
+
+.btn-location:hover {
+    background-color: #0056b3; /* Более темный синий при наведении */
+}
+
+.btn-reset {
+    background-color: #f44336; /* Красный цвет для кнопки сброса */
+}
+
+.btn-reset:hover {
+    background-color: #d32f2f; /* Более темный красный при наведении */
+}
+
+
+.weather-block, .hourly-block, .daily-block {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.weather-block:hover, .hourly-block:hover ,.daily-block:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.weather-info-item {
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.weather-info-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-weight: bold;
+    text-align: center;
+}
+
+.loading {
+    font-style: italic;
+    color: #007bff;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ваши существующие стили... */
+
+@media (max-width: 600px) {
+.form-group {
+flex-direction: column; /* Вертикальная компоновка для мобильных устройств */
+}
+
+#cityInput {
+margin-bottom: 10px; /* Отступ между полем ввода и кнопками */
+}
+
+button {
+width: 100%; /* Кнопки на всю ширину */
+}
+
+.weather-block, .hourly-block ,.daily-block{
+padding: 10px; /* Уменьшение отступов для меньших экранов */
+}
+
+h2 {
+font-size: 20px; /* Уменьшение размера шрифта заголовков */
+}
+
+.weather-info-item {
+font-size: 14px; /* Уменьшение размера шрифта для информации о погоде */
+}
+}
+
+
+.day-weather {
+    display: inline-block;
+    width: 120px;
+    margin: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.day-weather img {
+    width: 50px;
+    height: auto;
+}
+
+.daily-block {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

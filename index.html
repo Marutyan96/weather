@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текущая погода</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <input type="text" id="cityInput" placeholder="Введите название города">
+            <button onclick="getWeather()">Поиск</button>
+            <button onclick="getLocationWeather()">Получить погоду по местоположению</button>
+            <button onclick="resetWeather()">Сброс</button>
+        </div>
+        
+        <div class="weather-block">
+            <h2>Текущая погода</h2>
+            <div class="weather-info">
+                <div class="weather-info-item" id="cityName"></div>
+                <div class="weather-info-item" id="date"></div>
+                <div class="weather-info-item" id="description"></div>
+                <div class="weather-info-item" id="icon"></div>
+                <div class="weather-info-item" id="temp"></div>
+                <div class="weather-info-item" id="tempMin"></div>
+                <div class="weather-info-item" id="tempMax"></div>
+                <div class="weather-info-item" id="windSpeed"></div>
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+        </div>
+        <div class="hourly-block">
+            <h2>Почасовая погода</h2>
+            <div id="hourlyWeather"></div>
+        </div>
+
+        <div class="daily-block">
+            <h2>Дневная погода</h2>
+            <div id="dailyWeather"></div>
+        </div>
+        
+
+    </div>
+
+    <script src="script.js"></script> 
+
+</body>
+</html>
